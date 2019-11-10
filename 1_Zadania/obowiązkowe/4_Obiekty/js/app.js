@@ -1,9 +1,72 @@
-function multiply(array){
-    var suma = 1;
+//zadanie 0
+const city = {
+    capital: "Warszawa",
+    population: 2000000,
+    president: "Trzaskowski",
+    primeMinister: ["Adam","Bogdan"]
+};
 
-    for (i=0; i<array.lenght; i++){
-        suma = suma*array[i];
+console.log(city.capital + city.population + city.president + city.primeMinister);
+
+const timeMachine = {
+    shape: "Portal",
+    model: "",
+    run: function(date,place) { 
+        console.log('Przeniosłeś się do ${place} i jest obecnie ${date}+ date');
     }
-    return suma;
+};
+time Machine.run("20-11-2030","Sydney");
+    
+const book = {
+    title: 'test',
+    author: 'authot',
+    numperofPages: 'number'
+};
+
+for (const key of book) {
+    console.log(book[key]);
 }
-multiply([1,2,3,4,5,6,7])
+
+//zadanie 2
+
+var person = {
+    name: ' Andrzej',
+    age 12;
+    sayHello: function(){
+        console.log("hello");
+    }
+}
+
+console.log(person.name);
+console.log(person.age);
+person.sayHello();
+
+//Zadanie 3
+const recipe = {
+    title = 'perzepis',
+    servings = 0,
+}
+
+recipe.ingredients = [];
+recipe.addIngredient = function(ingredient) {
+    this.ingredient.push(ingredient);
+    this.servings++;
+}
+
+recipe.addIngredient('składnik 1');
+recipe.addIngredient('składnik 2');
+
+console.log(recipe.title);
+console.log(recipe.servings);
+console.log(recipe.ingredients);
+
+//zad6
+
+var spoon = {
+    isExist: true
+}
+
+var fork = spoon;
+fork.isExist  = false;
+
+console.log(spoon.isExist);
