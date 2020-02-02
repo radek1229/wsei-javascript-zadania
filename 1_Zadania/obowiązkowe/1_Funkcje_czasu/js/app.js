@@ -1,12 +1,12 @@
-function countHello(number){
-    var counter = 1;
-    var interval = setInterval(()=>{
-        
-        console.log('Hello', counter++)
-        if (counter > number){   
-             clearInterval(interval)
+function countHello(number) {
+    var count = 0;
+    var intervalID = setInterval(() => {
+        count++;
+        console.log('Hello', count);
+        if (count === number) {
+            clearInterval(intervalID);
         }
-    }, 500)
-
+    }, 500);
 }
-countHello(5);
+
+countHello(5)

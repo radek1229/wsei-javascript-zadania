@@ -1,72 +1,63 @@
-//zadanie 0
-const city = {
-    capital: "Warszawa",
-    population: 2000000,
-    president: "Trzaskowski",
-    primeMinister: ["Adam","Bogdan"]
+//zadanie 0a
+var city = {
+    capital: String,
+    population: Number,
+    president: String,
+    primeMinisters: String = []
 };
+console.log(city)
 
-console.log(city.capital + city.population + city.president + city.primeMinister);
-
-const timeMachine = {
-    shape: "Portal",
-    model: "",
-    run: function(date,place) { 
-        console.log('Przeniosłeś się do ${place} i jest obecnie ${date}+ date');
+//zadanie 0b
+var timeMachine = {
+    shape: 'rectangle',
+    model: 'new',
+    run: function (date, place) {
+        console.log(date + " " + place)
     }
-};
-time Machine.run("20-11-2030","Sydney");
-    
-const book = {
-    title: 'test',
-    author: 'authot',
-    numperofPages: 'number'
-};
+}
+for (let atributes in timeMachine) {
+    console.log(timeMachine[atributes])
+}
+timeMachine.run("1986-04-26", "Chernobyl")
 
-for (const key of book) {
-    console.log(book[key]);
+//zadanie 1
+const book = {
+    title: "The Lord of the Rings",
+    author: "J. R. R. Tolkien",
+    numberOfPages: 1345
+}
+for (let atributes in book) {
+    console.log(book[atributes])
 }
 
 //zadanie 2
-
-var person = {
-    name: ' Andrzej',
-    age 12;
-    sayHello: function(){
-        console.log("hello");
+const person = {
+    name: "Aureliusz",
+    age: 22,
+    sayHello: function () {
+        console.log('Hello')
     }
 }
+for (let atributes in person) {
+    console.log(person[atributes])
+}
+person.sayHello()
 
-console.log(person.name);
-console.log(person.age);
-person.sayHello();
-
-//Zadanie 3
+//zadanie 3 
 const recipe = {
-    title = 'perzepis',
-    servings = 0,
+    title: "Jajecznica z boczkiem i pomidorem",
+    servings: 2
+}
+recipe.ingredients = ['6 jajek', '200g boczku', '1 pomidor']
+for (let atributes in recipe) {
+    console.log(recipe[atributes])
 }
 
-recipe.ingredients = [];
-recipe.addIngredient = function(ingredient) {
-    this.ingredient.push(ingredient);
-    this.servings++;
-}
-
-recipe.addIngredient('składnik 1');
-recipe.addIngredient('składnik 2');
-
-console.log(recipe.title);
-console.log(recipe.servings);
-console.log(recipe.ingredients);
-
-//zad6
-
+//zadanie 6 
 var spoon = {
     isExist: true
 }
 
 var fork = spoon;
-fork.isExist  = false;
-
-console.log(spoon.isExist);
+fork.isExist = false;
+//łyżka nie isnieje - wlasciwosc fork przechodzi na spoon
